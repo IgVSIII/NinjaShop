@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Neucha';
+    src: url(fonts/Neucha-Regular.ttf);
+}
+@font-face {
+    font-family: 'Yeon Sung';
+    src: url(fonts/YeonSung-Regular.ttf);
+
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Neucha';
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+hr {
+    color: black;
+    background-color: black;
+    height: 2px;
+    width: 90%;
+    margin: 20px 10px;
+}
+
+header {
+    padding: 20px 0px;
+    font-family: 'Yeon Sung';
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    margin: 20px;
+    font-size: 2em;
+}
+
+.user-block {
+    font-family: 'Neucha';
+    text-align: left;
+    margin: 20px;
+}
+
+.flex-center-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-container-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo-wrap {
+    min-width: 300px;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px 10px;
+    padding: 10px;
+    background-color: rgb(243, 136, 136);
+}
+
+.control-elem {
+    display: flex;
+    margin: 10px 5px;
+}
+
+
+
+
+article {
+    width: 300px;
+    margin: 20px 10px;
+}
+
+
+
+.d-img {
+    margin: 10px 0px 0px 0px;
+    height: 300px;
+    width: 300px;
+    
+}
+
+.bye-button {
+    width: 50px;
+    padding: 5px;
+    margin: 10px 0px;
+    background-color: rgb(33, 97, 33);
+    color: whitesmoke;
+}
+
+.bye-button:hover {
+    cursor: pointer;
+    background-color: rgb(5, 5, 5);
+}
+
+
+footer {
+    padding: 20px 0px;
+    height: 100px;
+    text-align: center;
+    
+}
+
+
+
+.flex-center-column-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-logo{
+    margin: 40px 10px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    font-family: 'Yeon Sung';
+}
+
+.circle {
+    background-color: rgb(243, 136, 136);
+    height: 160px;
+    width: 160px;
+    border-radius: 90%;
+    position: relative;
+}
+
+.circle:hover {
+    box-shadow: 0px 0px 40px -5px rgb(221, 99, 0);
+    
+}
+
+
+.user-authorization{
+    line-height: 300%;
+}
+
+.enter-button {
+    line-height: 100%;
+    margin: 20px;
+    background-color: rgb(243, 136, 136);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.2em;
+    padding: 10px 10px;
+}
+
+.enter-button:hover {
+    cursor: pointer;
+    background-color: rgb(5, 5, 5);
+
+}
+
+.enter-button-green {
+    line-height: 100%;
+    margin: 20px;
+    background-color: rgb(33, 97, 33);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.2em;
+    padding: 10px 10px;
+}
+
+
+.enter-button-green:hover {
+    cursor: pointer;
+    background-color: rgb(5, 5, 5);
+
+}
+
+.exitF {
+    color: rgb(110, 110, 110);
+}
+
+.exitF:hover {
+    cursor: pointer;
+    background-color: rgb(215, 209, 219);
+}
+
+.logo img:hover {
+    box-shadow: 0px 0px 15px -5px rgb(221, 99, 0);
+}
+
+
+
+
+
