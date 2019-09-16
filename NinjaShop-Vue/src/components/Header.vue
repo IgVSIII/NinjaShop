@@ -37,7 +37,7 @@ export default {
     methods: {
         exit: function() {
             localStorage.removeItem('token');
-            window.location.href = "http://localhost:8080/";
+            this.$router.push('./');
         }
     }
 

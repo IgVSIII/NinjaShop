@@ -99,47 +99,31 @@ export default {
         },
         addBuy: function(product) {
             this.$emit('addBuy', product);
+        },
+        loadBase: function(path) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", this.uri + path + "?token=" + JSON.parse(localStorage.token).token, true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
+
+            xhr.send();
+
+            xhr.onloadend = () => {
+                if (xhr.status !== 200) {
+                    this.$router.push('./');
+                } else {
+                    this[path] = JSON.parse(xhr.responseText)[path];
+                    console.log(this[path]);
+                }
+            }
+
         }
     },
     created: function() {
 
-        /* Написать миксин */
         if (localStorage.token) {
             this.uri = config.uri;
-
-            const xhrCat = new XMLHttpRequest();
-            xhrCat.open("GET", this.uri + "categories?token=" + JSON.parse(localStorage.token).token, true);
-            xhrCat.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
-
-            xhrCat.send();
-
-            xhrCat.onloadend = () => {
-                if (xhrCat.status == 500) {
-                    window.location.href = "http://localhost:8080/";
-                } else if (xhrCat.status !== 200) {
-                    window.location.href = "http://localhost:8080/";
-                } else {
-                    this.categories = JSON.parse(xhrCat.responseText).categories;
-                    console.log(this.categories);
-                }
-            }
-
-            const xhrProd = new XMLHttpRequest();
-            xhrProd.open("GET", this.uri + "products?token=" + JSON.parse(localStorage.token).token, true);
-            xhrProd.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
-
-            xhrProd.send();        
-            
-            xhrProd.onloadend = () => {
-                if (xhrProd.status == 500) {
-                    window.location.href = "http://localhost:8080/";
-                } else if (xhrProd.status !== 200) {
-                    window.location.href = "http://localhost:8080/";
-                } else {
-                    this.products = JSON.parse(xhrProd.responseText).products;
-                    console.log(this.products);
-                }
-            }
+            this.loadBase( "categories");
+            this.loadBase("products");
         } else {
             alert("Error authorization");
         }

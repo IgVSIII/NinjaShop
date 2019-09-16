@@ -56,7 +56,7 @@ export default {
                     this.error = "Ошибка авторизации"
                 } else {
                     localStorage.token = xhr.responseText;
-                    window.location.href = window.location.href +  "main";
+                    this.$router.push('main');
                     this.error = ''
                 }
             }

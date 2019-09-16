@@ -19,7 +19,7 @@ export default {
   methods: {
     addBuyProduct: function(product) {
       this.listBuy.push(product);
-      console.log(this.listBuy)
+      //console.log(this.listBuy)
     },
     clearBuyList: function() {
       this.listBuy = [];
